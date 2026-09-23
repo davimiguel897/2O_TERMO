@@ -166,6 +166,32 @@ SET telefone = NULL
 WHERE id_cliente = 5;
 -- TUDO QUE FOR NULL, NÃO PODE SER USADO EM CONDICIONAIS, COMO WHERE, HAVING, ETC.
 
+
+------------------------------------------------------------------------------------------------
+
+
+-- DESAFIO A
+INSERT INTO cliente (NOME, EMAIL, TELEFONE, CIDADE, ATIVO) VALUES
+('Lucas Martins', 'lucas@email.com', NULL, 'São Paulo', TRUE),
+('Mariana Oliveira', 'mari@email.com', NULL, 'Rio de Janeiro', TRUE);
+
+INSERT INTO categoria (nome) VALUES
+('Especiais da Casa');
+
+INSERT INTO produto (NOME, PRECO, ATIVO, ID_CATEGORIA) VALUES
+('Café Especial', 12.99, TRUE, 6),
+('Café com Leite Especial', 14.99, TRUE, 6),
+('Cappuccino Especial', 16.99, TRUE, 6);
+
+INSERT INTO pedido (DATA_PEDIDO, STATUS, VALOR_TOTAL, ID_CLIENTE) VALUES
+('2024-06-07 10:00:00', 'FINALIZADO', 0.00, 11),
+('2024-06-07 11:30:00', 'FINALIZADO', 0.00, 12);
+
+SET @PEDIDO = LAST_INSERT_ID();
+SELECT @PEDIDO
+
+-----------------------------------------------------------------------------------------------
+
 SELECT * FROM pedido;
 
 -- MENSAGEM DE SUCESSO 
