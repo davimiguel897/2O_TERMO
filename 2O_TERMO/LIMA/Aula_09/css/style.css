@@ -175,6 +175,7 @@ li {
     justify-content: center;
     color: black;
     text-align:left;
+    padding: 40;
 }
 
 form {
@@ -200,4 +201,9 @@ label {
     font-family: 'Tiny5', cursive;
     color: white;
     font-size: 20px;
+}
+
+.contato-cabecalho {
+    gap: 20px;
+    padding: 20;
 }
