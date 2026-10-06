@@ -5,25 +5,28 @@
 
 body {
     background-image: url('');
+    margin: 20px;
 }
 
 .cabecalho {
     background-color: #472C0D;
-    padding: 20px;
+    padding: 30px;
     font-family: Arial, sans-serif;
     color: white;
+    font-size: larger;
 }
 
 p {
     font-family: 'Pixelify Sans', sans-serif;
-    color: #C66A1A;
+    color: #fd7701
 }
 
 h1 {
     font-family: 'Press Start 2P', cursive;
-    color: black;
+    color: #fca451;
     float: left;
     gap: 10px;
+    
 }
 
 h2 {
@@ -47,8 +50,8 @@ h5 {
 }
 
 nav {
-    display:row;
-    justify-content: space-around;
+    display: flex;
+    justify-content: end; 
     padding: 10px;
 }
 
@@ -76,9 +79,27 @@ li {
     height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     color: black;
     text-align:left;
+}
+
+.banner-conteudo {
+    padding: 20px;
+    margin-left: 20px;    
+}
+
+.botao {
+    background-color: #C66A1A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-radius: 6px;
 }
 
 .sobre {
@@ -172,16 +193,25 @@ li {
     height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     color: black;
     text-align:left;
-    padding: 40;
+    padding: 70;
 }
 
-form {
+.contato-cabecalho {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+
+
+.formulario-contato {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
+    width: 50%;
+    padding: 80px;
 }
 
 label {
@@ -200,10 +230,25 @@ label {
 #titulo-rodape {
     font-family: 'Tiny5', cursive;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
 }
 
-.contato-cabecalho {
-    gap: 20px;
-    padding: 20;
+.botao-enviar {
+    background-color: #C66A1A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 6px;
+}
+
+.input-nome, .input-email, .input-mensagem {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Pixelify Sans', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
 }
