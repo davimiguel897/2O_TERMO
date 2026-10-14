@@ -89,7 +89,6 @@ WHERE id_cliente = 93;
 -- 11. Atualize valor_total do pedido de acordo com os itens cadastrados.
 --     Você pode calcular previamente com SELECT SUM(quantidade * preco_unitario).
 
-
 -- 12. Escolha um dos produtos criados e faça uma exclusão lógica (ativo = FALSE).
 
 UPDATE produto
@@ -121,12 +120,30 @@ WHERE id_cliente = 94
 
 
 -- 15. Explique em comentário por que a FK bloqueou a exclusão.
--- Resposta: A FK bloqueo a exclusão porque o cliente possui pedidos associados na tabela de pedidos. A integridade referencial do banco de dados impede que registros que estão sendo referenciados em outras tabelas sejam excluídos, garantindo que não haja inconsistências nos dados.
+-- Resposta: A FK bloqueou a exclusão porque o cliente possui pedidos associados na tabela de pedidos. A integridade referencial do banco de dados impede que registros que estão sendo referenciados em outras tabelas sejam excluídos, garantindo que não haja inconsistências nos dados.
 
 -- 16. Crie uma categoria temporária chamada 'Excluir Depois' e remova-a.
+create table Excluir_depois (
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+drop TABLE Excluir_depois
 
-INSERT INTO categoria (nome) VALUES
-('Excluir Depois');
+-- Parte D - Integridade e validação
 
-DELETE FROM categoria
-WHERE id_categoria = 7
+-- 17. Tente inserir um produto usando uma tabela inexistente.
+INSERT INTO categoria_cafe (nome) VALUES
+('Café Especial');
+-- O erro informado indica que a tabela 'categoria_cafe' não existe no banco de dados. Certifique-se de que a tabela foi criada corretamente antes de tentar inserir dados nela.
+
+-- 18. Tente cadastrar um cliente com um e-mail que já existe.
+Insert INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Daniela Martins', 'daniela@email.com', '19999999999', 'São Paulo', TRUE);
+-- O erro informado indica que a tentativa de inserir um cliente com um e-mail que já existe na tabela 'cliente' violou a restrição de unicidade (UNIQUE) definida para a coluna 'email'. Isso garante que cada cliente tenha um endereço de e-mail único no banco de dados, evitando duplicidades.
+
+-- 19. Tente criar um pedido para um cliente que não existe.
+INSERT INTO pedido (DATA_PEDIDO, STATUS, VALOR_TOTAL, ID_CLIENTE) VALUES
+('2024-06-07 12:00:00', 'ABERTO', 50.00, 999);
+-- O erro informado indica que a tentativa de criar um pedido para um cliente que não existe violou a restrição de chave estrangeira (FK) definida para a coluna 'ID_CLIENTE'. Isso garante que apenas clientes existentes possam ter pedidos associados.
+
+-- 20. Para cada erro, identifique qual restrição foi responsável
