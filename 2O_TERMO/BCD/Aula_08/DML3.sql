@@ -147,3 +147,12 @@ INSERT INTO pedido (DATA_PEDIDO, STATUS, VALOR_TOTAL, ID_CLIENTE) VALUES
 -- O erro informado indica que a tentativa de criar um pedido para um cliente que não existe violou a restrição de chave estrangeira (FK) definida para a coluna 'ID_CLIENTE'. Isso garante que apenas clientes existentes possam ter pedidos associados.
 
 -- 20. Para cada erro, identifique qual restrição foi responsável
+
+-- Parte E - Desafio Completo
+
+START TRANSACTION;
+UPDATE cliente
+SET cidade = 'Limeira'
+Where id_cliente = 3;
+COMMIT;
+ROLLBACK;
