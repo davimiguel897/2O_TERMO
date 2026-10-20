@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "Martelo",
+    "quantidade": 20,
+    "custoUnitario": 50
+  },
+  {
+    "nome": "Alicate",
+    "quantidade": 10,
+    "custoUnitario": 40
+  },
+  {
+    "nome": "Chave Inglesa",
+    "quantidade": 15,
+    "custoUnitario": 30
+  },
+  {
+    "nome": "Chave de Fenda",
+    "quantidade": 25,
+    "custoUnitario": 30
+  }
+]
