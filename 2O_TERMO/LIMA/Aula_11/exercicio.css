@@ -1,0 +1,42 @@
+/* .grid-ca {
+    display: grid;
+
+    Exercício 1
+    grid-template-columns: 3fr 1fr;
+
+    Exercício 2
+    grid-template-columns: 2fr 1fr;
+    Exercício 3 
+    A coluna 2fr fica maior porque tem mais frações atribuídas
+
+    Exercício 4
+    .grid-ca {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    Exercício 6
+    .grid-ca {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+} */
+
+/* Exercício 5 */
+@media (min-width: 1024px) {
+    .grid-ca {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-ca {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-ca {
+        grid-template-columns: 1fr;
+    }
+}
