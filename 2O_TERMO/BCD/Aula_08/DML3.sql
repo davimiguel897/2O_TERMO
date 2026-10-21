@@ -150,9 +150,39 @@ INSERT INTO pedido (DATA_PEDIDO, STATUS, VALOR_TOTAL, ID_CLIENTE) VALUES
 
 -- Parte E - Desafio Completo
 
-START TRANSACTION;
+-- 21. Inicie uma transação.
+START TRANSACTION
+
+-- 22. Dentro dela, cadastre um cliente, um pedido e dois itens relacionados.
+
 UPDATE cliente
 SET cidade = 'Limeira'
-Where id_cliente = 3;
-COMMIT;
+WHERE id_cliente = 3;
+
+INSERT INTO pedido (DATA_PEDIDO, STATUS, VALOR_TOTAL, ID_CLIENTE) VALUES
+('2024-06-07 13:00:00', 'ABERTO', 30.00, 3);
+
+Insert into produto (NOME, PRECO, ATIVO, ID_CATEGORIA) VALUES
+('Guarana', 6.00, TRUE, 1);
+
+
+-- 23. Faça uma consulta com JOIN comprovando que os registros existem
+--     enquanto a transação está aberta.
+
+SELECT p.id_pedido, c.nome AS cliente, i.id_produto, i.quantidade, i.preco_unitario
+FROM pedido as p
+INNER JOIN cliente c ON p.id_cliente = c.id_cliente
+INNER JOIN item_pedido i ON p.id_pedido = i.id_pedido;
+
+-- 24. Execute ROLLBACK e depois use SELECT para provar que o cadastro foi desfeito.
+
 ROLLBACK;
+SELECT * FROM pedido
+
+-- 25. Repita o processo com novos dados e finalize usando COMMIT.
+--     Depois consulte os registros persistidos.
+
+
+-- DESAFIO EXTRA
+-- 26. Escolha uma situação realista do SmartCoffee que exija INSERT + UPDATE
+--     ou UPDATE + DELETE lógico. Descreva a regra de negócio e implemente.
