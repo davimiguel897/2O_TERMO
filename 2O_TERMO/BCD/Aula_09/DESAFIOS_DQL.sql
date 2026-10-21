@@ -75,3 +75,100 @@ HAVING COUNT(*) >= 2;
 SELECT SUM(valor_total) AS FATURAMENTO_TOTAL
 FROM pedido
 WHERE status = 'FINALIZADO'
+
+-- PARTE D - RELACIONAMENTOS
+
+-- 16. Liste cada pedido exibindo id, data, nome do cliente, status e valor total.
+select p.id_pedido, p.data_pedido, c.nome AS nome_cliente, p.status, p.valor_total
+from pedido p
+inner join cliente c on p.id_cliente = c.id_cliente;
+
+-- 17. Liste cada produto acompanhado do nome de sua categoria.
+SELECT p.nome AS nome_produto, c.nome AS nome_categoria
+FROM produto p
+INNER JOIN categoria c ON p.id_categoria = c.id_categoria;
+
+-- 18. Gere um relatório dos itens vendidos: pedido, produto, quantidade,
+--     preço unitário e subtotal.
+SELECT P.ID_PEDIDO, DATE_FORMAT(P.DATA_PEDIDO, '%d %m %Y %H %i') AS DATA, C.NOME AS CLIENTE, PR.NOME AS PRODUTO, IP.QUANTIDADE, IP.PRECO_UNITARIO, IP.QUANTIDADE * IP.PRECO_UNITARIO AS SUBTOTAL
+FROM PEDIDO AS P
+INNER JOIN CLIENTE AS C
+ON C.ID_CLIENTE = P.ID_CLIENTE
+INNER JOIN ITEM_PEDIDO AS IP
+ON IP.ID_PEDIDO = P.ID_PEDIDO
+INNER JOIN PRODUTO AS PR
+ON PR.ID_PRODUTO = IP.ID_PRODUTO
+ORDER BY P.ID_PEDIDO, PR.NOME;
+
+
+-- 19. Mostre todos os clientes, inclusive aqueles que nunca fizeram pedidos.
+SELECT C.NOME, P.ID_PEDIDO, P.DATA_PEDIDO
+FROM CLIENTE AS C
+LEFT JOIN PEDIDO AS P
+ON P.ID_CLIENTE = C.ID_CLIENTE
+ORDER BY C.NOME;
+
+-- 20. Liste apenas os clientes que nunca fizeram pedidos.
+SELECT C.ID_CLIENTE, C.NOME
+FROM CLIENTE AS C
+LEFT JOIN PEDIDO AS P
+ON P.ID_CLIENTE = C.ID_CLIENTE
+WHERE P.ID_PEDIDO IS NULL;
+
+-- PARTE E - DESAFIO GERENCIAL
+
+-- 21. Informe quantos pedidos FINALIZADOS cada cliente realizou e quanto
+--     cada cliente gastou. Ordene do maior gasto para o menor.
+SELECT C.NOME AS CLIENTE, COUNT(P.ID_PEDIDO) AS QTDE_PEDIDOS, SUM(P.VALOR_TOTAL) AS TOTAL_COMPRADO
+FROM CLIENTE AS C
+INNER JOIN PEDIDO AS P
+ON P.ID_CLIENTE = C.ID_CLIENTE
+WHERE P.STATUS = 'PREPARANDO'
+GROUP BY C.ID_CLIENTE, C.NOME
+ORDER BY TOTAL_COMPRADO DESC;
+
+-- 22. Mostre a quantidade de produtos e o preço médio de cada categoria.
+SELECT COUNT(PR.ID_PRODUTO) AS PRODUTOS, ROUND(AVG(PR.PRECO),2) AS PRECO_MEDIO
+FROM CATEGORIA AS CA
+INNER JOIN PRODUTO AS PR
+ON PR.ID_CATEGORIA = CA.ID_CATEGORIA
+ORDER BY PRECO_MEDIO DESC;
+
+-- 23. Descubra quais produtos possuem preço superior ao preço médio geral.
+SELECT NOME, PRECO
+FROM PRODUTO
+WHERE PRECO > (SELECT AVG(PRECO)
+FROM PRODUTO
+)
+ORDER BY PRECO DESC;
+
+
+-- 24. Classifique os produtos como Econômico, Intermediário ou Premium.
+--     Defina e informe suas faixas de preço.
+SELECT NOME, PRECO,
+CASE
+    WHEN PRECO < 8.00 THEN 'Econômico'
+    WHEN PRECO < 15.00 THEN 'Intermediário'
+    ELSE 'Premium'
+END AS CLASSIFICAÇÃO
+FROM PRODUTO
+ORDER BY PRECO;
+
+-- 25. CONSULTA AUTORAL
+-- Pergunta de negócio:
+-- 25 - Mostre os produtos que nunca foram vendidos, ou seja, que não possuem nenhum item de pedido associado.
+
+SELECT P.NOME AS PRODUTO, C.NOME AS CATEGORIA
+FROM PRODUTO AS P
+LEFT JOIN ITEM_PEDIDO AS IP
+ON IP.ID_PRODUTO = P.ID_PRODUTO
+LEFT JOIN CATEGORIA AS C
+ON C.ID_CATEGORIA = P.ID_CATEGORIA
+WHERE IP.ID_PRODUTO IS NULL
+
+--
+-- Por que essa informação é útil?
+-- Pois permite identificar produtos que não estão gerando receita, ajudando na tomada de decisões sobre estoque, marketing e promoções. 
+
+-- Consulta:
+-- Aula_09
