@@ -1,6 +1,7 @@
 .titulo {
     font-family: 'Tiny5', sans-serif;
     color: white;
+    text-shadow: #ffe1d5 2px 2px 4px;
 }
 
 body {
@@ -26,27 +27,32 @@ h1 {
     color: #fca451;
     float: left;
     gap: 10px;
+    text-shadow: #a53508 2px 2px 4px;
     
 }
 
 h2 {
     font-family: 'Silkscreen', sans-serif;
     color: white;
+    text-shadow: #ada29d 2px 2px 4px;
 }
 
 h3 {
     font-family: 'Pixelify Sans', sans-serif;
     color: #FAF1EC;
+    text-shadow: #8b8474 2px 2px 4px;
 }
 
 h4 {
     font-family: 'Pixelify Sans', sans-serif;
     color: #C66A1A;
+    text-shadow: #ffffff 2px 2px 4px;
 }
 
 h5 {
     font-family: 'Pixelify Sans', sans-serif;
     color: white;
+    text-shadow: #9c9997 2px 2px 4px;
 }
 
 nav {
@@ -85,8 +91,21 @@ li {
 }
 
 .banner-conteudo {
-    padding: 20px;
+    padding: 60px;
     margin-left: 20px;    
+}
+
+.banner-imagem {
+    box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+}
+
+#banner-imagem img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .botao {
@@ -99,7 +118,6 @@ li {
     text-decoration: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    box-radius: 6px;
 }
 
 .sobre {
@@ -118,7 +136,7 @@ li {
     display: grid;
     grid-template-columns: 1fr;
     align-content: start;
-    gap: 24px;
+    gap: 30px;
     padding: 32px;
     box-sizing: border-box;
 }
@@ -128,7 +146,7 @@ li {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     width: 100%;
-    margin: 0;
+    margin: 20;
     padding: 0;
     list-style: none;
 }
@@ -138,7 +156,7 @@ li {
 }
 
 .card-cafe {
-    background-color: #FAF1EC;
+    background-color: #f7e8e0;
     width: 100%;
     min-height: 250px;
     display: flex;
@@ -148,17 +166,24 @@ li {
     padding: 16px;
     border-radius: 5px;
     box-sizing: border-box;
+    box-shadow: 8px 8px 0 #ebcfa0;
 }
 
 .card-cafe figure {
-    width: 100%;
+    width: 80%;
+    object-fit: cover;
+    overflow: hidden;
     margin: 0 0 12px;
+    box-shadow: 8px 8px 0 #ebcfa0;
+    border-radius: 5px;
 }
 
 .card-cafe img {
     display: block;
+    margin: 0 auto;
     width: 100%;
-    height: 130px;
+    min-height: 400px;
+    max-height: 800px;
     object-fit: cover;
 }
 
@@ -209,7 +234,7 @@ li {
 .formulario-contato {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     width: 50%;
     padding: 80px;
 }
