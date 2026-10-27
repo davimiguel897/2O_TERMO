@@ -1,0 +1,118 @@
+
+
+body {
+    background-image: url('https://wallpapercave.com/wp/wp13908405.png');
+    background-size: cover;
+    margin: 20px;
+}
+
+#titulo {
+    display: flex;
+    order: 0;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #fffefd;
+    gap: 10px;
+    text-shadow: #070707 2px 2px 4px;
+    align-items: center;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #70e082, #70f7f7);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: rgb(250, 248, 248);
+    text-shadow: rgb(0, 0, 0); 
+    font-size: larger;
+}
+
+.cabecalho figure {
+    order: 1;
+    margin: 0 20px;
+}
+
+.cabecalho figure img {
+    width: 60px;
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    order: 2;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    flex-direction: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+p {
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(222, 247, 217)
+}
+
+.banner-imagem {
+    box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+}
+
+img {
+    max-width: 600px;
+    min-width: none;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    float: left;
+    gap: 10px;
+    text-shadow: #83f8f8 2px 2px 4px;
+    
+}
+
+.articles {
+    padding: 60px;
+    margin-left: 20px;    
+}
+
+.inicio {
+    background-color: #a1ffeb;
+    background-image: linear-gradient(to right, #0d9dd6, #00f4fc);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: black;
+    text-align:left;
+}
+
+.banner-imagem img {
+    display: grid;
+    justify-content:end;
+    width: auto;
+    height: auto;
+    object-fit: auto;
+    border-radius: 20px;
+    box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
