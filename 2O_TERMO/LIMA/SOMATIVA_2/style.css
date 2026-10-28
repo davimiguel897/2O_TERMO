@@ -75,6 +75,8 @@ p {
 .banner-imagem {
     box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -82,24 +84,47 @@ img {
     min-width: none;
 }
 
+p {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    font-size: 25px;
+}
+
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: #ffffff;
     float: left;
     gap: 10px;
+    font-size: 50px;
     text-shadow: #83f8f8 2px 2px 4px;
     
 }
 
+figcaption {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    float: left;
+    gap: 10px;
+    font-size: 20px;
+    text-shadow: #83f8f8 2px 2px 4px;
+}
+
+h4 {
+    font-family: 'Press Start 2P', cursive;
+    color: #00fa2a;
+    font-size: 20px;
+    text-shadow: #83f8f8 2px 2px 4px;
+}
+
 .articles {
     padding: 60px;
-    margin-left: 20px;    
+    margin-left: 10px;    
 }
 
 .inicio {
     background-color: #a1ffeb;
     background-image: linear-gradient(to right, #0d9dd6, #00f4fc);
-    height: 500px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: left;
