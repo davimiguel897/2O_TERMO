@@ -1,20 +1,39 @@
 .titulo {
+    display: flex;
+    font-size: 50px;
+    text-decoration: none;
     font-family: 'Tiny5', sans-serif;
     color: white;
     text-shadow: #ffe1d5 2px 2px 4px;
 }
 
-body {
-    background-image: url('');
-    margin: 20px;
+.titulo a{
+    display: flex;
+    justify-content: flex-start;
+
 }
 
+body {
+    margin: 20px;
+}
 .cabecalho {
-    background-color: #472C0D;
-    padding: 30px;
-    font-family: Arial, sans-serif;
-    color: white;
-    font-size: larger;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color:#472C0D;
+}
+
+.topicos {
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.topicos a:hover {
+    color:#C66A1A
+    /* representa o estado em que o cursor passa sobre o elemento */
 }
 
 p {
@@ -25,7 +44,6 @@ p {
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: #fca451;
-    float: left;
     gap: 10px;
     text-shadow: #a53508 2px 2px 4px;
     
@@ -96,8 +114,11 @@ li {
 }
 
 .banner-imagem {
+    display: flex;
+    justify-content: right;
     box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 60px;
+    margin: 0;
 }
 
 #banner-imagem img {
@@ -187,6 +208,12 @@ li {
     object-fit: cover;
 }
 
+.card-cafe:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(43, 23, 13, 0.12);
+}
+
+
 @media (max-width: 700px) {
     .lista-cafes {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -205,12 +232,38 @@ li {
 
 .ambiente {
     background-color: #4D321A;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 450px;
+    display: flex;;
+    justify-content: space-between;
     color: black;
     text-align:left;
+}
+
+.ambiente-conteudo {
+    padding: 60px;
+    margin-left: 20px;    
+}
+
+.imagem-ambiente {
+    display: flex;
+    justify-content: space-between;
+    min-height: 400px;
+    max-height: 800px;
+    box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+    margin: 0;
+}
+
+.imagem-ambiente img {
+    min-height: 300px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-ambiente {
+    flex: 1;
 }
 
 .contato {
@@ -245,11 +298,12 @@ label {
 }
 
 .rodape {
+    display: flex;
+    justify-content: space-between;
     background-color: #472C0D;
     padding: 20px;
     font-family: Arial, sans-serif;
     color: white;
-    text-align: center;
 }
 
 #titulo-rodape {
@@ -274,6 +328,6 @@ label {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: 'Pixelify Sans', sans-serif;
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
 }

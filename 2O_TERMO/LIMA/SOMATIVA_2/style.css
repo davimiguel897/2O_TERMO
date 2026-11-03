@@ -141,3 +141,15 @@ h4 {
     border-radius: 20px;
     box-shadow: #080808 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.sobre {
+    background-color: #a1ffeb;
+    background-image: linear-gradient(to right, #0d9dd6, #00f4fc);
+    gap: 20px;
+    height: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: black;
+    text-align:right;
+}

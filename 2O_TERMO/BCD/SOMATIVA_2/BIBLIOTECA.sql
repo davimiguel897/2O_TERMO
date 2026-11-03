@@ -191,7 +191,7 @@ SELECT id_usuario, COUNT(status_emprestimo) AS quantidade_emprestimos
 FROM emprestimo
 GROUP BY id_usuario;
 
--------------------------------------- 19
+--------------------------------------
 
 SELECT U.NOME, E.ID_EMPRESTIMO, E.DATA_EMPRESTIMO
 FROM USUARIO AS U
@@ -202,7 +202,7 @@ ORDER BY U.NOME;
 
 -- FASE 4
 
--------------------------------------- 20
+--------------------------------------
 
 START TRANSACTION;
 
@@ -217,7 +217,7 @@ select * from livro
 
 COMMIT;
 
--------------------------------------- 21
+--------------------------------------
 
 START TRANSACTION
 
@@ -231,7 +231,7 @@ ROLLBACK
 
 COMMIT;
 
--------------------------------------- 22
+--------------------------------------
 
 START TRANSACTION
 
@@ -251,7 +251,7 @@ select * from livro
 
 COMMIT;
 
---------------------------------------------- 23
+---------------------------------------------
 
 START TRANSACTION
 
@@ -267,5 +267,5 @@ select * from emprestimo
 
 COMMIT
 
----------------------------------------------- 24
+----------------------------------------------
 
