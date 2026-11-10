@@ -333,6 +333,11 @@ label {
     color: #080808;
 }
 
+#mensagem {
+    height: 100px;
+    resize: none;
+}
+
 .rodape {
     display: flex;
     justify-content: space-between;
