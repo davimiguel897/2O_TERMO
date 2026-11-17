@@ -237,5 +237,7 @@ COMMIT;
 -- a) recurso que evita email repetido: CONSTRAINT
 -- b) recurso que evita codigo de jogo repitido: CONSTRAINT
 -- c) recurso que evita estoque negativo: CHECK
--- d) recurso que evita locação de cliente inexistente: 
+-- d) recurso que evita locação de cliente inexistente: FOREIGN KEY
 -- e) recurso que evita exclusão de jogo com histórico: FOREIGN KEY
+-- f) recurso que evita locação gravada sem baixa de estoque: TRANSACTION
+-- g) recurso que evita locação quando não há unidades disponíveis: CHECK
