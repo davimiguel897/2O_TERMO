@@ -175,61 +175,61 @@ INSERT INTO locacao (id_cliente, id_jogo, data_retirada, data_prevista, data_dev
 
 UPDATE jogo
 set quantidade_disponivel = quantidade_disponivel - 1
-WHERE id_jogo = 2
+WHERE id_jogo = 2;
 
-select * from jogo
+select * from jogo;
 
 COMMIT;
 
 -------------------------------------
 
-START TRANSACTION
+START TRANSACTION;
 
 UPDATE jogo
 set quantidade_disponivel = 20
-WHERE id_jogo = 2
+WHERE id_jogo = 2;
 
-select * from jogo
+select * from jogo;
 
-ROLLBACK
+ROLLBACK;
 
 COMMIT;
 
 -------------------------------------
 
-START TRANSACTION
+START TRANSACTION;
 
 UPDATE jogo
 set quantidade_disponivel = 8
-WHERE id_jogo = 3
+WHERE id_jogo = 3;
 
-SAVEPOINT reajuste_jogo
+SAVEPOINT reajuste_jogo;
 
 UPDATE jogo
 SET quantidade_disponivel = 10
-WHERE id_jogo = 3
+WHERE id_jogo = 3;
 
-ROLLBACK TO SAVEPOINT reajuste_jogo
+ROLLBACK TO SAVEPOINT reajuste_jogo;
 
-select * from jogo
+select * from jogo;
 
 COMMIT;
 
 -------------------------------------------------------
 
-START TRANSACTION
+START TRANSACTION;
 
 UPDATE locacao
 SET status_locacao = 'DEVOLVIDA'
-where id_locacao = 1
+where id_locacao = 1;
 
 UPDATE jogo
 SET quantidade_disponivel = quantidade_disponivel + 1
-WHERE id_jogo = 6
+WHERE id_jogo = 6;
 
-select * from locacao
+select * from locacao;
 
-COMMIT
+COMMIT;
 
 ----------------------------------------------------------------------------
 
@@ -238,4 +238,4 @@ COMMIT
 -- b) recurso que evita codigo de jogo repitido: CONSTRAINT
 -- c) recurso que evita estoque negativo: CHECK
 -- d) recurso que evita locação de cliente inexistente: 
--- e) recurso que evita exclusão de jogo ocm histórico: FOREIGN KEY
+-- e) recurso que evita exclusão de jogo com histórico: FOREIGN KEY
