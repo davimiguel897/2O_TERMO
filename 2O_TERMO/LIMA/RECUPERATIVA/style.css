@@ -57,6 +57,18 @@ body {
     text-align: center;
 }
 
+.banner-conteudo h1 {
+    color: aliceblue;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.banner-conteudo p {
+    color: aliceblue;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
 .imagem {
     width: calc(100vw - 124px);
     margin: 0;
@@ -74,9 +86,9 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 60px 50px;
+    gap: 50px 40px;
     width: 100%;
-    padding: 40px;
+    padding: 20px;
     list-style: none;
     box-sizing: border-box;
 }
