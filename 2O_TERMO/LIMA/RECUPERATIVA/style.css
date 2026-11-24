@@ -4,13 +4,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(https://img.magnific.com/vetores-premium/fundo-azul-de-tecnologia-de-dados-com-placa-de-circuito_53876-119577.jpg?semt=ais_hybrid&w=740&q=80)
+}
+
+
 .cabecalho {
-    background-color: rgb(0, 64, 160);
+    background-image: linear-gradient(to right, rgb(65, 141, 255), rgb(0, 0, 0));
     display: flex;
     justify-content: center;
     align-items: center;
     color: aliceblue;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .lista {
@@ -29,10 +38,9 @@
 }
 
 .inicio {
-    margin: 10px 2px;
-    background-color: rgb(159, 197, 230);
+    margin: 20px 2px 60px;
     text-align: center;
-    padding: 20px;
+    padding: 60px;
 }
 
 .conteudo-2{
@@ -41,58 +49,194 @@
     justify-content: center;
 }
 
+.banner-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagem {
+    width: calc(100vw - 124px);
+    margin: 0;
+}
+
+.imagem img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
 .atracoes {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 50px;
+    gap: 60px 50px;
     width: 100%;
+    padding: 40px;
     list-style: none;
+    box-sizing: border-box;
+}
+
+.explorar_atracoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: aliceblue;
+    background-color: rgb(0, 64, 160);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.explorar_atracoes:hover {
+    background-color: rgb(0, 119, 255);
+    transition: 0.5s;
 }
 
 .card {
-    border: 1px solid rgb(163, 163, 163);
-    background-color: #ffffff;
     width: 100%;
-    min-height: 175px;
-    margin-left: auto;
+    height: 175px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgb(255, 255, 255);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.55);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.card:hover .card-title {
+    opacity: 1;
 }
 
 .programacao-sobre {
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 50px;
+    gap: 60px;
     width: 100%;
+    margin: 60px 0;
+    padding: 40px;
     list-style: none;
+    box-sizing: border-box;
 }
 
 .programacao {
-    border: 1px solid rgb(163, 163, 163);
-    background-color: #ffffff;
     width: 100%;
     min-height: 200px;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
     border-radius: 5px;
     box-sizing: border-box;
 }
 
 .sobre {
-    border: 1px solid rgb(163, 163, 163);
-    background-color: #ffffff;
     width: 100%;
     min-height: 200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     border-radius: 5px;
     box-sizing: border-box;
-    gap: 20px;
+    padding: 30px;
+}
+
+.programacao,
+.sobre {
+    color: #ffffff;
+    background-color: rgba(0, 24, 55, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.programacao h1,
+.sobre h1 {
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px rgba(65, 141, 255, 0.8);
+}
+
+.programacao h3,
+.sobre h3 {
+    margin-top: 0;
+}
+
+.rodape {
+    background-image: linear-gradient(to right, rgb(65, 141, 255), rgb(0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.rodape a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    color: aliceblue;
 }
