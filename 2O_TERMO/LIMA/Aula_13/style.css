@@ -1,0 +1,130 @@
+.inicio {
+    border: 2px solid #0d00ff;
+    background-image: linear-gradient(135deg, #00b7ff, #04d9ff);
+    display: flex;
+    padding: 10px;
+    height: 80px;
+    justify-content: space-between;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(800deg, #4F46E5, #06B6D4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inicio span {
+    color: rgb(252, 252, 252);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.inicio a {
+    text-decoration: none;
+    list-style: none;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.navegacao {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 48px;
+    margin: 0;
+    padding: 30px;
+    /* align-items: flex-end;
+    justify-content: space-between;
+    align-content: flex-end; */
+}
+
+.conteudo-inicial {
+    border: 2px solid #0d00ff;
+    background-color: #249cff;
+    display: flex;
+}
+
+.conteudo-art {
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.cartao-img {
+    transition: all 0.5s ease;
+}
+
+.cartao-img:hover {
+    box-shadow: 0 10px 24px -8px black;
+    background: white;
+    backdrop-filter: blur(14px);
+    transform: translateY(-20px)
+}
+
+.galeria-conteudo {
+    background-color: #00a2ff;
+    padding: 0;
+    margin: 0;
+}
+
+.galeria-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-column: auto;
+}
+
+.galeria-img img {
+    display: block;
+    max-width: 100%;
+    height: 50%;
+}
+
+.galeria-img , ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.gal-img {
+    position: sticky;
+    overflow: hidden;
+    height: max-content;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gal-img figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 14px;
+    color: white;
+    background: #0F172A;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gal-img:hover figcaption {
+    transform: translateY(0);
+}
+
+.sec-ultimo {
+    background-color: #00a2ff;
+    padding: 0;
+    margin: 0;
+}
+
+.img-ultimo {
+    display: grid;
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+}

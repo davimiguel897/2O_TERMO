@@ -3,62 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Revisão - Recuperativa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Bootstrap</title>
 </head>
 <body>
-    <header class="inicio">
-        <a href="#marca"><h1><span>RETRO</span>GAME</h1></a>
+    <h1>Hello, World!</h1>
+    <h2>Olá, mundo!</h2>
 
-        <nav>
-            <ul class="navegacao">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#jogos">Jogos</a></li>
-                <li><a href="#consoles">Consoles</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+    <a href="#link" class="link-ant">Mundo Antigo</a>
+
+    <h1 class="text-primary text-center">Hello World :)</h1>
+    <a href="#link-novo" class="btn btn-outline-primary btn-sm">Mundo Novo</a>
+
     <main>
-        <section class="conteudo-inicial">
-            <article class="conteudo-art">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos veritatis commodi iste possimus aspernatur dolores dolorum eligendi? Debitis soluta assumenda, molestias ex vel sed nam fugiat temporibus dolores laudantium distinctio.
+        <section class="container py-5 bg-dark">
+            <h1 class="text-primary text-center mb-4">Maravilhas do Mundo Novo</h1>
+
+            <p class="text-secondary">Acompanhe nossos conteúdo sobre o inicio do nosso novo mundo</p>
+        </section>
+
+        <h1>Container</h1>
+        <section class="container bg-dark">
+            <p class="text-primary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam harum neque aut eum reprehenderit minima rerum laborum consectetur pariatur facere, quam quae exercitationem nam nihil architecto facilis suscipit doloribus incidunt!</p>
+        </section>
+
+        <section class="container-fluid bg-primary">
+            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, dolor veniam. Ullam laboriosam, rem neque dignissimos cupiditate nemo commodi ducimus cumque quam. Aliquid fuga quidem temporibus esse repudiandae id in.</p>
+        </section>
+
+        <h2 class="text-primary">Responsividades</h2>
+        <article class="col-12 col-md-6 col-lg-4 bg-dark">
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error voluptatem architecto ut, quas eveniet nam assumenda distinctio voluptate, esse possimus tenetur! Illo iste eveniet voluptate dolorem itaque? Velit, fugit obcaecati?</p>
+        </article>
+
+        <section class="container">
+            <article class="row">
+                <aside class="col-md-4 border">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur dignissimos, distinctio iusto nihil porro ducimus eveniet labore assumenda eos, dolores, aspernatur eius nesciunt temporibus repellendus qui blanditiis voluptate ex laborum?</p>
+                </aside>
+
+                <aside class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur dignissimos, distinctio iusto nihil porro ducimus eveniet labore assumenda eos, dolores, aspernatur eius nesciunt temporibus repellendus qui blanditiis voluptate ex laborum?</p>
+                </aside>
+
+                <aside class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur dignissimos, distinctio iusto nihil porro ducimus eveniet labore assumenda eos, dolores, aspernatur eius nesciunt temporibus repellendus qui blanditiis voluptate ex laborum?</p>
+                </aside>
             </article>
-            <figure class="cartao-img">
-                <img src="https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-vetorial-jogos-retro-n%C3%A9on-log%C3%B3tipo-de-jogo-com-efeito-glitch-161070596.jpg" alt="Primeiro Conteúdo de Imagens Digitais">
-            </figure>
         </section>
 
-        <section class="galeria-conteudo">
-            <ul class="galeria-img">
-                <li>
-                    <figure class="gal-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Imagem 1">
-                        <figcaption>Sonic The Hedgehog</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure class="gal-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Sonic_2_US_Cover.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Imagem 1">
-                        <figcaption>Sonic The Hedgehog 2</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure class="gal-img">
-                        <img src="https://m.media-amazon.com/images/M/MV5BYzdkNjdiN2ItMDBjYS00NTk4LWI2OTYtMWVmYmJmYTBiODI1XkEyXkFqcGc@._V1_.jpg" alt="Imagem 1">
-                        <figcaption>Sonic The Hedgehog 3</figcaption>
-                    </figure>
-                </li>
-            </ul>
+        <section class="container">
+            <article class="row">
+                <figure class="col-md-6">
+                    <img src="https://static.wikia.nocookie.net/doors-game/images/c/c0/Seek2.png/revision/latest/thumbnail/width/360/height/450?cb=20240730083641" alt="Imagem 1 em Teste">
+                </figure>
+
+                <figure class="col-md-6">
+                    <img src=https://static.wikia.nocookie.net/doors-game/images/c/c0/Seek2.png/revision/latest/thumbnail/width/360/height/450?cb=20240730083641" alt="Imagem 1 em Teste">
+                </figure>
+            </article>
         </section>
 
-        <section class="sec-ultimo">
-            <figure class="img-ultimo">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Imagem Final">
-            </figure>
-        </section>
     </main>
-
-
 </body>
 </html>
